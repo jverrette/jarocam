@@ -1,0 +1,13 @@
+[Unit]
+Description=DoorCam
+After=network.target
+
+[Service]
+Type=simple
+User=teamjjj
+WorkingDirectory=/home/teamjjj/code/jarocam
+ExecStart=/home/teamjjj/code/jarocam/runContinuously.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
